@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Analise de Contrato - ASSP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Style/estilo.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+    <script>
+                        $(document).on('ready', function () {
+                            $("#input-b5").fileinput({ showCaption: true });
+                        });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img class="img-circle" id="img_logo" src="../img/logo_menu.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Avalie seu Contrato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" role="button" data-toggle="modal" data-target="#modal-contato">Entre em contato</a>
+                </li>
+                <li class="nav-item text-right">
+                    <a href="#" class="navbar-brand" role="button" data-toggle="modal" data-target="#login-modal">Acesso Restrito</a>
+                </li>
+            </ul>
+            <div class="text-right">
+
+                <img src="/AASP/img/mitra.jpeg" style="height:50px" class="text-right" />
+            </div>
+        </div>
+    </nav>
+   
+        <div class="panel-heading">
+            <div class="row col-md-12">
+                <div class="col-md-6">
+                    <img src="../img/checkmark.jpg" class="center-block img-responsive"/>
+                    <a href="#" class="btn-princ azul center-block text-center nounderline active" role="button" data-toggle="modal" data-target="#modal-clausulas">Inserir clausulas manualmente</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="../img/contrato.png" class="center-block img-responsive" />
+                    <a href="#" class="btn-princ azul center-block text-center nounderline" role="button" data-toggle="modal" data-target="#modal-contrato">Anexar o Contrato</a>
+                </div>
+            </div>
+        
+        <div class="panel-body">
+            
+        </div>
+    </div>
+   
+  
+    <div class="modal fade" id="modal-contrato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-body">
+            <div class="modal-content">
+
+                <div class="text-center jumbotron">
+                    <h2 class="col-md-10">Faça o upload do seu contrato</h2>
+                    <a href="" class="glyphicon glyphicon-remove-sign col-md-2 top-right nounderline"></a>
+                </div>
+                <div class="panel-body" align="center">
+                    <div class="col-md-8">
+                        <label class="control-label">Selecionar arquivo</label>
+                        <input id="input-b5" name="input-b5[]" type="file" multiple class="btn azul">
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <a href="dash.html" class=""><img src="../img/lupa.jpeg" /><br /><h3 class="btn-princ btn-outline-info nounderline col-md-12">Analisar</h3></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    
+    <div class="modal fade" id="modal-clausulas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-body">
+            <div class="modal-content">
+                <div class="text-center jumbotron">
+                     <h2 class="col-md-10">Marque abaixo as clausulas do seu contrato</h2>
+                    <a href="principal.html" class="glyphicon glyphicon-remove-sign col-md-2 top-right nounderline"></a>
+                </div>
+                <div class="panel-body" align="center">
+                    <div class="checkbox">
+                        <div class="col-md-5 text-left">
+                             <label>
+                               <input type="checkbox"> TÍTULO <br />
+                              </label>
+                                <br />
+                            <label>
+                                <input type="checkbox"> DO OBJETO E CÓDIGO DE ACESSO <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DO PLANO DE SERVIÇO <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DAS CONDIÇÕES PARA O INÍCIO DA PRESTAÇÃO DO SERVIÇO <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DO INÍCIO DA PRESTAÇÃO DO SERVIÇO <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DAS TARIFAS E PREÇOS <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DA FORMA DE COBRANÇA <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DOS DIREITOS E OBRIGAÇÕES DOS ASSINANTES <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DOS DIREITOS E OBRIGAÇÕES DA VIVO <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DA MUDANÇA DE ENDEREÇO DE INSTALAÇÃO <br />
+                            </label>
+                            <br />
+                        </div>
+                        <div class="col-md-4 text-left">
+                            <label>
+                                <input type="checkbox"> DA CONTESTAÇÃO DE VALORES <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DA SUSPENSÃO DOS SERVIÇOS A PEDIDO DO ASSINANTE <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DAS SANÇÕES POR FALTA DE PAGAMENTO <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DA EXTINÇÃO<br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DA LEGISLAÇÃO APLICÁVEL <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> DO FORO <br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox"> ANEXO I - ATENDIMENTO AO ASSINANTE <br />
+                            </label>
+                            <br />
+                           
+                        </div>
+
+                    <div class="col-md-2">
+                        <a href="dash.html" class=""><img src="../img/lupa.jpeg" /><br /><h3 class="btn-princ btn-outline-info nounderline col-md-12">Analisar</h3></a>
+
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    <div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="text-center jumbotron">
+                    <h2 class="col-md-10">Como podemos ajudar ?</h2>
+                    <a href="principal.html" class="glyphicon glyphicon-remove-sign col-md-2 top-right nounderline"></a>
+                </div>
+                <div class="panel-body" align="center">
+                    <div class="container">
+                        <div class="col-md-5">
+                            <div class="form-area">
+                                <form role="form">
+                                    <br style="clear:both">
+                                    
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Telefone" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <textarea class="form-control" type="textarea" id="message" placeholder="Mensagem" maxlength="640" rows="7"></textarea>
+                                        <span class="help-block"><p id="characterLeft" class="help-block ">Após preencher clique em enviar</p></span>
+                                    </div>
+
+                                    <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Enviar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="panel-body" align="center">
+                    <img class="img-circle" id="img_logo" src="../img/logo_login.png">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Entre com seu usuário e senha.</span>
+                            </div>
+                            <input id="login_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Lembre-me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Logar</button>
+                            </div>
+                            <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Não lembra sua senha?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Registrar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Entre com seu email.</span>
+                            </div>
+                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Entrar</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Registrar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Registrar uma nova conta.</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Registrar</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Logar</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Esqueceu sua senha?</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Register Form -->
+
+                </div>
+                <!-- End # DIV Form -->
+
+            </div>
+        </div>
+    </div>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <footer class="col-md-12">
+        <div class="container">
+           
+            <p class="footer__copyright"> ©2017 Mitra - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- END # MODAL LOGIN -->
+    <script src="../Scripts/jquery-3.2.1.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+
+
+</body>
+</html>

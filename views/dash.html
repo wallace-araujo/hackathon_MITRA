@@ -1,0 +1,1842 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mitra</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+
+  
+    <link href="../Style/estilo.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="../dist/css/skins/_all-skins.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {packages:['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Language', 'Speakers (in millions)'],
+    ['Total de Processos',  808730],
+    ['Total de Processos Contratuais',  98256]
+  ]);
+
+  var options = {
+    //legend: 'none',
+          title: 'Perspectiva Geral',
+          backgroundColor: 'transparent',
+          //pieSliceText: 'label',
+          pieHole: 0.4,
+          colors: ['#4B77BE', '#E43A45','#1BBC9B','#F3C200','#2F353B'],
+    height: 350
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
+
+  chart.draw(data, options);
+}
+</script>
+
+<script type="text/javascript">
+
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Language', 'Speakers (in millions)'],
+    ['Total de Processos Contratuais',  100000],
+    ['Total de Processos Telefonias',  30000]
+  ]);
+
+  var options = {
+   // legend: 'none',
+          title: 'Processos envolvendo Contratos',
+          backgroundColor: 'transparent',
+          //pieSliceText: 'label',
+    pieStartAngle: 100,
+    pieHole: 0.4,
+    height: 350
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('pie_chart2'));
+
+  chart.draw(data, options);
+}
+</script>
+
+<script type="text/javascript">
+
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Language', 'Speakers (in millions)'],
+    ['Acordo',  29.19],
+    ['Improcedente',  9.03],
+    ['Procedência',  37.11],
+    ['Parcialmente', 24.44]
+  ]);
+
+  var options = {
+   // legend: 'none',
+          title: 'Resultados em 1° Estância',
+          backgroundColor: 'transparent',
+         // pieSliceText: 'label',
+    pieStartAngle: 100,
+    pieHole: 0.4,
+    height: 350
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('pie_chart3'));
+
+  chart.draw(data, options);
+}
+</script>
+
+   <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Tempo medio dos Processos em Qtd de anos'],
+          ['2011',  5],
+          ['2012',  6],
+          ['2013',  6],
+          ['2014',  8],
+          ['2015',  7]
+
+        ]);
+
+        var options = {
+          title: 'Evolução do prazo medio em 1° estancia',
+          curveType: 'function',
+          backgroundColor: 'transparent',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
+<style type="text/css">
+  .scroll {
+  width:100%;
+  height:500px;
+  overflow:auto;
+}
+
+ .noDisplay{display:none;}
+
+ .yesDisplay{display:block;}
+</style>
+
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-color">
+        <a class="navbar-brand" href="#"><img class="img-circle" id="img_logo" src="../img/logo_menu.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="principal.html">Avalie seu Contrato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" role="button" data-toggle="modal" data-target="#modal-contato">Entre em contato</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#" class="nav-link" role="button" data-toggle="modal" data-target="#login-modal">Acesso Restrito</a>
+                </li>
+            </ul>
+            <div class="text-right">
+
+                <img src="/AASP/img/mitra.jpeg" style="height:50px" class="text-right" />
+            </div>
+        </div>
+    </nav>
+
+
+
+
+  <div class="">
+
+    <div class="content-wrapper">
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-xs-12">
+            <br>
+
+
+            <!---   TITULO-->
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <h1><i class="fa fa-fw fa-child"></i> PARABENS!  Contarato Analisado com Sucesso.</h1>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>   </div>
+
+
+
+
+
+
+
+          
+
+
+            <div class="box box-default">
+              <div class="box-header with-border">
+                  <i class="fa fa-warning"></i>
+
+                  <h3 class="box-title">Análise Grafica dos Processos</h3>
+
+              </div>
+            
+              <div class="box-body">
+
+                <div class="col-xs-4">
+
+                      <span id="pie_chart" style="display: inline-block; height: 250px;">
+                      </span>
+
+                </div> 
+
+                <div class="col-xs-4">
+                  
+                    <span id="pie_chart2" style="display: inline-block; height: 250px;">
+                    </span>
+                </div>
+
+                <div class="col-xs-4">
+                  
+                  <span id="pie_chart3" style="display: inline-block; height: 250px;">
+                  </span>
+
+                </div>
+
+
+<div class="col-xs-8">
+<div id="curve_chart" style="width: 100%; height: 300px"></div>
+</div>
+
+<div class="col-xs-4"><br><br><br><br>
+
+
+          <!-- small box -->
+          <div class="small-box bg-gray">
+            <div class="inner">
+              <h3>7<sup style="font-size: 20px"> anos</sup></h3>
+
+              <p>Prazo medio em 1° estancia Hoje</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            
+          </div>
+
+</div>
+
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          <div class="col-xs-12">
+
+            <div class="col-md-2">
+              <div class="box box-default">
+              <h4 class="box-title"> Cláusula Analisadas</h4>
+                  <div class="box-body box-profile scroll">
+          
+                     <a type="button" data-element="#minhaDiv" class=" btn-toggle btn btn-primary btn-block" ><b>TÍTULO</b></a>
+
+                     <a type="button" data-element="#minhaDiv2" class="btn-toggle btn btn-primary btn-block"><b>DO OBJETO E <br>CÓDIGO <br>DE ACESSO</b></a>
+
+                     <a type="button" data-element="#minhaDiv3" class="btn-toggle btn btn-primary btn-block"><b>DO PLANO <br>DE SERVIÇO</b></a>
+
+                     <a type="button" data-element="#minhaDiv4" class="btn-toggle btn btn-primary btn-block"><b>DAS CONDIÇÕES <br>PARA O INÍCIO <br>DA PRESTAÇÃO <br>DO SERVIÇO</b></a>
+
+                     <a type="button" data-element="#minhaDiv5" class="btn-toggle btn btn-primary btn-block"><b>DO INÍCIO <br>DA PRESTAÇÃO <br>DO SERVIÇO</b></a>
+
+                     <a type="button" data-element="#minhaDiv6" class="btn-toggle btn btn-primary btn-block"><b>DAS TARIFAS <br>E PREÇOS</b></a>
+
+                     <a type="button" data-element="#minhaDiv7" class="btn-toggle btn btn-primary btn-block"><b>DA FORMA <br>DE COBRANÇA</b></a>
+
+                     <a type="button" data-element="#minhaDiv8" class="btn-toggle btn btn-primary btn-block"><b>DOS DIREITOS <br>E OBRIGAÇÕES <br>DOS ASSINANTES</b></a>
+
+                     <a type="button" data-element="#minhaDiv9" class="btn-toggle btn btn-primary btn-block"><b>DOS DIREITOS <br>E OBRIGAÇÕES <br>DA VIVO</b></a>
+
+                     <a type="button" data-element="#minhaDiv10" class="btn-toggle btn btn-primary btn-block"><b>DA MUDANÇA <br>DE ENDEREÇO <br>DE INSTALAÇÃO</b></a>
+
+                     <a type="button" data-element="#minhaDiv12" class="btn-toggle btn btn-primary btn-block"><b>DA CONTESTAÇÃO<br> DE VALORES</b></a>
+
+                     <a type="button" data-element="#minhaDiv13" class="btn-toggle btn btn-primary btn-block"><b>DA SUSPENSÃO <br>DOS SERVIÇOS <br>A PEDIDO DO <br>ASSINANTE</b></a>
+
+                     <a type="button" data-element="#minhaDiv14" class="btn-toggle btn btn-primary btn-block"><b>DAS SANÇÕES <br>POR FALTA DE <br>PAGAMENTO</b></a>
+
+
+                    <a type="button" data-element="#minhaDiv15" class="btn-toggle btn btn-primary btn-block"><b>DA EXTINÇÃO</b></a>
+
+
+                    <a type="button" data-element="#minhaDiv15" class="btn-toggle btn btn-primary btn-block"><b>DA LEGISLAÇÃO <br>APLICÁVEL</b></a>
+
+                    <a type="button" data-element="#minhaDiv16" class="btn-toggle btn btn-primary btn-block"><b>DO FORO</b></a>
+
+
+                    <a type="button" data-element="#minhaDiv17" class="btn-toggle btn btn-primary btn-block"><b>ANEXO I - ATENDIMENTO <br>AO ASSINANTE</b></a>
+
+
+
+                  </div>
+  
+                 </div>
+             </div>
+
+
+            <div class="col-xs-5">
+
+                <!--  <iframe src="pdf/SearchContentServlet.pdf" width="500" height="580" style="border: none;"></iframe>-->
+
+
+                <div class="box box-solid scroll">
+                  <div class="box-header with-border">
+                    
+                    <i class="fa fa-text-width"></i>
+
+                      <h3 class="box-title">Contrato Analisado</h3>
+                  </div>
+            
+                  <p> 
+                    <!-- <?php include_once('Vivo.txt'); ?> -->
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 1 de 14
+                    CONTRATO DE PRESTAÇÃO DE SERVIÇO VIVO INTERNET FIXA
+
+                    Pelo presente instrumento particular, a TELEFÔNICA BRASIL S/A, com sede na Av. Engenheiro Luiz Carlos
+                    Berrini, nº. 1.376, São Paulo - SP, com CNPJ/MF nº 02.558.157/0001-62, devidamente representada nos
+                    termos de seu estatuto social, doravante designada VIVO, e, de outro lado o CONTRATANTE, como tal
+                    definido o cliente que aceita os termos e condições deste instrumento, através de adesão ao serviço; têm
+                    ajustado entre si o que segue:
+                    <b>CLÁUSULA PRIMEIRA - DO OBJETO</b>
+                    1.1 O presente Contrato tem por objeto a prestação de serviço de comunicação multimídia consistente
+                    na disponibilidade de acesso dedicado para transmissão e recepção (transporte) de sinais digitais em alta
+                    velocidade que, para efeito deste instrumento, é denominado VIVO INTERNET FIXA.
+                    CLÁUSULA SEGUNDA - DA INFRAESTRUTURA NECESSÁRIA À PRESTAÇÃO DO VIVO INTERNET
+                    FIXA
+                    2.1 Para a disponibilização e regular funcionamento do VIVO INTERNET FIXA, faz-se necessário que
+                    o CONTRATANTE disponibilize a seguinte infraestrutura:
+                    2.1.1 Um micro computador e um modem com seus acessórios, que devem obedecer às especificações
+                    técnicas indicadas pela VIVO, conforme relacionado no site www.vivo.com.br ou na Central de
+                    Relacionamento 10315. Portadores de necessidades especiais de fala/audição acesso pelo 142.
+                    2.1.2 Um provedor de serviço de conexão à Internet banda larga compatível com o VIVO INTERNET
+                    FIXA e habilitado junto à VIVO.
+
+                    2.2 O CONTRATANTE pode optar pela aquisição, comodato ou locação do modem descrito no item
+                    2.1.1, acima, sendo que a aquisição, comodato ou locação poderão ser feitos, em caso de disponibilidade,
+                    pela VIVO, ou pelos provedores habilitados ou no mercado.
+                    CLÁUSULA TERCEIRA - DAS CARACTERÍSTICAS BÁSICAS DO VIVO INTERNET FIXA
+                    3.1 São características básicas do VIVO INTERNET FIXA:
+                    3.1.1 O VIVO INTERNET FIXA é prestado em diferentes modalidades, cujas características, tecnologias
+                    utilizadas e faixas de velocidade estão descritas no site www.vivo.com.br.
+                    3.1.2 As velocidades contratadas no VIVO INTERNET FIXA são velocidades nominais máximas de
+                    acesso, sendo que estão sujeitas a variações decorrentes da própria tecnologia utilizada (ADSL) e das
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 2 de 14
+                    redes que compõe a Internet, conforme os fatores técnicos abaixo expostos que podem interferir na
+                    velocidade contratatada:
+                    a) quantidade de pessoas conectadas ao mesmo tempo ao provedor de serviço de conexão à
+                    internet, o que gera o congestionamento de acesso;
+                    b) distância entre o imóvel do CONTRATANTE e a central com a infra-estrutura mais próxima;
+                    c) qualidade e extensão da fiação interna do imóvel do CONTRATANTE;
+                    d) capacidade de processamento do computador do CONTRATANTE;
+                    e) interferências e atenuações próprias da rede Internet, que fogem ao controle da VIVO, produzidos
+                    entre o sinal emitido e o sinal percebido, principalmente quando a origem dos dados for originada
+                    em rede de terceiros;
+                    f) páginas de destino na Internet;
+                    g) problemas no microcomputador ou modem utilizado pelo CONTRATANTE.
+                    3.1.2.1 Por velocidade nominal máxima teórica entende-se a velocidade que a tecnologia ADSL suporta, ou
+                    seja, um usuário navegando na internet poderá atingir até uma determinada velocidade limite, sem ter
+                    garantia que esta velocidade será sempre mantida em virtude da ocorrência dos fatores descritos na
+                    cláusula anterior.
+                    3.1.2.2 Por redes que compõe a Internet entende-se como um aglomerado de redes independentes, com
+                    equipamentos diferentes e administrados de acordo com políticas diferentes pelas Operadoras. Os pacotes
+                    que viajam na Internet, de acordo com as aplicações dos usuários, podem sofrer atrasos ou serem
+                    descartados no meio do caminho entre a origem e o destino, justamente porque os equipamentos das
+                    Operadoras são diferentes ao longo da rede, afetando diretamente a velocidade do acesso do usuário à
+                    Internet.
+                    3.1.2.3 Em virtude dos fatores técnicos descritos na cláusula anterior, a VIVO não se responsabiliza pelas
+                    diferenças de velocidades ocorridas, pois são alheios à vontade da VIVO e fogem do seu controle.
+                    3.1.3 A VIVO fornecerá velocidade instantânea mínima nos termos da Resolução 574/2011 - Anatel,
+                    conforme abaixo discriminado:
+                    I. vinte por cento da velocidade máxima contratada pela CONTRATANTE, até o dia 31/10/2013;
+                    II. trinta por cento da velocidade máxima contratada pela CONTRATANTE, nos doze meses
+                    seguintes ao período estabelecido no inciso I desta cláusula; e
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 3 de 14
+                    III. quarenta por cento da velocidade máxima contratada pela CONTRATANTE, a partir do término do
+                    período estabelecido no inciso II desta cláusula.
+                    3.1.3.1 Para a mensuração das velocidades mencionadas nos incisos acima, deverão ser observadas as
+                    orientações constantes no site www.brasilbandalarga.com.br.
+                    3.1.4 Para a configuração do VIVO INTERNET FIXA a VIVO atribuirá ao usuário um endereço IP
+                    (“Internet Protocol”) dinâmico.
+                    3.1.5 O CONTRATANTE pode utilizar o VIVO INTERNET FIXA em até dois pontos de conexão no
+                    mesmo endereço de instalação do serviço e para a realização de até 30 (trinta) sessões TCP/IP
+                    simultâneas.
+                    3.1.5.1 Caso o VIVO INTERNET FIXA seja utilizado simultaneamente em mais de um ponto de
+                    conexão, a velocidade VIVO será compartilhada e, portanto, o VIVO INTERNET FIXA sofrerá variações de
+                    performance.
+                    3.1.5.2 O endereço de instalação do VIVO INTERNET FIXA é exatamente aquele constante do cadastro
+                    do CONTRATANTE, não sendo possível ligar o serviço num ponto de conexão situado em endereço
+                    diverso do da instalação do VIVO INTERNET FIXA.
+                    3.1.6 É vedada, em face da regulamentação emanada pela Agência Nacional de Telecomunicações
+                    (ANATEL), aplicada ao serviço ora contratado, a utilização do VIVO INTERNET FIXA para a fruição do
+                    Serviço Telefônico Fixo Comutado - STFC.
+                    3.1.7 É vedado ao CONTRATANTE utilizar o VIVO INTERNET FIXA para disponibilizar o terminal de
+                    computador a ele conectado como servidor de dados de qualquer espécie, inclusive: servidores Web, FTP,
+                    SMTP, POP3.
+                    CLÁUSULA QUARTA - DA INSTALAÇÃO DO VIVO INTERNET FIXA
+                    4.1 O VIVO INTERNET FIXA será instalado no endereço indicado pelo CONTRATANTE, mediante a
+                    análise, por parte da VIVO, da disponibilidade na Central que comporta a infraestrutura a qual o endereço
+                    de instalação está vinculado, bem como à viabilidade técnica no local solicitado.
+                    4.1.1 Em caso de solicitação de mudança de endereço das instalações do VIVO INTERNET FIXA, o
+                    atendimento ficará condicionado a estudos de viabilidade técnica e à disponibilidade na Central que
+                    comporta a infraestrutura a qual o novo endereço está vinculado, bem como ao aceite, pelo
+                    CONTRATANTE, de eventual nova condição comercial vigente à época da referida solicitação.
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 4 de 14
+                    4.1.2 No caso de impossibilidade técnica para a instalação do VIVO INTERNET FIXA no endereço
+                    inicialmente solicitado ou para o qual foi solicitada a mudança do serviço, este contrato estará
+                    automaticamente extinto, sem que caiba ônus ou qualquer espécie de ressarcimento a qualquer das
+                    partes.
+                    4.1.3 Será cobrado o valor relativo à Habilitação do VIVO INTERNET FIXA (item 9.1.1 deste contrato)
+                    nas seguintes hipóteses:
+                    4.1.3.1 Solicitação do CONTRATANTE de adesão ao VIVO INTERNET FIXA.
+                    4.1.3.2 Solicitação do CONTRATANTE de mudança de endereço de instalação do VIVO INTERNET
+                    FIXA.
+                    4.1.3.3 Solicitação do CONTRATANTE de mudança da modalidade utilizada, para qualquer um das
+                    modalidades previstas no site www.vivo.com.br.
+                    4.2 A VIVO fica isenta de qualquer responsabilidade por incompatibilidade dos sistemas operacionais
+                    e/ou softwares de propriedade do CONTRATANTE com o software de autenticação utilizado para a
+                    instalação do VIVO INTERNET FIXA.
+                    4.3 O serviço será ativado e, consequentemente cobrado, a partir da primeira conexão à internet
+                    realizada pelo CONTRATANTE.
+                    4.3.1. O serviço será desativado caso o CONTRATANTE não realize a instalação e subsequente
+                    utilização do serviço VIVO INTERNET FIXA em até 40 (quarenta) dias contados da entrega do Kit de autoinstalação,
+                    exceto quando a referida instalação estiver pendente de apoio técnico por parte da VIVO.
+                    CLÁUSULA QUINTA - DAS OBRIGAÇÕES DA VIVO
+                    Sem prejuízo de outras disposições deste contrato, constituem obrigações da VIVO:
+                    5.1 Ativar a interligação, desde o ponto de conexão física à Rede de Telecomunicações da VIVO,
+                    localizado no endereço do CONTRATANTE, bem como os meios de transmissão necessários ao
+                    funcionamento do VIVO INTERNET FIXA.
+                    5.2 Configurar, supervisionar, manter e controlar o VIVO INTERNET FIXA, de modo a garantir seu
+                    funcionamento, até a porta de saída do modem, no endereço do CONTRATANTE.
+                    5.3 Prestar os esclarecimentos necessários ao CONTRATANTE, de modo a permitir o funcionamento
+                    do VIVO INTERNET FIXA.
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 5 de 14
+                    5.4 Proceder às adequações técnicas eventualmente necessárias, de sua responsabilidade, para o
+                    perfeito funcionamento do VIVO INTERNET FIXA.
+                    5.5 Não recusar o atendimento a pessoas cujas dependências estejam localizadas na área de
+                    prestação do serviço, nem impor condições discriminatórias, salvo nos casos em que a pessoa se
+                    encontrar em área geográfica ainda não atendida pela rede.
+                    5.6 Tornar disponíveis ao CONTRATANTE, com antecedência razoável, informações relativas a
+                    preços, condições de fruição do serviço, bem como suas alterações.
+                    5.7 Tornar disponíveis ao CONTRATANTE informações sobre características e especificações
+                    técnicas dos terminais, necessárias à conexão dos mesmos à sua rede, sendo-lhe vedada a recusa a
+                    conectar equipamentos sem justificativa técnica comprovada.
+                    5.8 Prestar esclarecimentos ao CONTRATANTE, de pronto e livre de ônus, face a suas reclamações
+                    relativas à fruição dos serviços.
+                    5.9 Zelar estritamente pelo sigilo inerente aos serviços de telecomunicações e pela confidencialidade
+                    quanto aos dados e informações do CONTRATANTE, empregando todos os meios e tecnologia
+                    necessárias para assegurar este direito.
+                    5.10 Manter um centro de atendimento telefônico para seus Contratantes, com discagem direta gratuita
+                    durante vinte e quatro horas por dia, sete dias por semana.
+                    5.11 Cumprir com as demais obrigações previstas nos artigos 48 à 58 da Resolução n.º 272, de 09 de
+                    agosto de 2001, da Anatel.
+                    CLÁUSULA SEXTA - DAS OBRIGAÇÕES DO CONTRATANTE
+                    Sem prejuízo de outras disposições deste contrato, constituem obrigações do CONTRATANTE:
+                    6.1 Pagar à VIVO os valores devidos pela prestação dos serviços ora contratados nas respectivas
+                    datas de vencimento.
+                    6.2 Manter a infraestrutura necessária para o funcionamento do VIVO INTERNET FIXA, conforme item
+                    2.1 deste instrumento.
+                    6.3 Assumir inteira responsabilidade pelo correto uso do VIVO INTERNET FIXA no endereço instalado,
+                    inclusive com relação à configuração de seus equipamentos, obedecendo aos padrões e características
+                    técnicas autorizadas pela VIVO, comprometendo-se a não alterar as configurações padrões da VIVO e
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 6 de 14
+                    utilizar exclusivamente o software de autenticação da VIVO, cumprindo os procedimentos técnicos
+                    indicados.
+                    6.4 O serviço é prestado para o uso do CONTRATANTE, devendo este utilizar o VIVO INTERNET
+                    FIXA e os equipamentos colocados à sua disposição em até dois pontos de conexão no mesmo endereço
+                    de instalação do serviço, para os fins previstos neste contrato, sendo expressamente proibida sua
+                    comercialização, cessão, locação, sublocação, compartilhamento, disponibilização ou transferência a
+                    terceiros, sob pena de rescisão contratual e aplicação da multa prevista no item 13.3 deste contrato.
+                    6.5 Assumir inteira responsabilidade, na qualidade de fiel depositário, pela guarda e integridade do
+                    modem locado da VIVO e instalado no endereço de funcionamento do VIVO INTERNET FIXA, obrigandose,
+                    nos termos da lei, em caso de perda, extravio, dano ou destruição, mesmo que parcial, por qualquer
+                    motivo, ao respectivo ressarcimento pelo valor de mercado atualizado do modem.
+                    6.5.1 A disponibilização pela VIVO do modem ao CONTRATANTE, seja por meio de locação, comodato
+                    ou qualquer outro meio, não caracteriza transferência de propriedade do respectivo equipamento, motivo
+                    pelo qual no caso de extinção contratual o CONTRATANTE permanecerá responsável pela guarda do
+                    modem, sob pena do ressarcimento previsto no item 6.5 acima, o qual será retirado pela VIVO em até 30
+                    (trinta) dias úteis contados da data da efetiva extinção deste contrato.
+                    6.6 Permitir aos prepostos designados pela VIVO o acesso às dependências do local onde está sendo
+                    prestado o serviço objeto deste contrato, bem como no caso de suspeita de descumprimento da obrigação
+                    prevista no item 6.4.
+                    6.7 Responsabilizar-se pelo pagamento dos custos decorrentes da mudança de endereço de
+                    instalação do VIVO INTERNET FIXA, desde que possível, independentemente de sua causa e a qualquer
+                    tempo, durante a vigência contratual.
+                    6.8 Proceder às adequações técnicas necessárias, indicadas pela VIVO, ou autorizar, desde já, que
+                    esta assim o proceda, em face de toda e qualquer evolução tecnológica que possa ocorrer durante a
+                    vigência deste contrato, a fim de permitir o perfeito funcionamento do VIVO INTERNET FIXA.
+                    6.8.1 Caso o CONTRATANTE se recuse a proceder às adaptações mencionadas neste item, o contrato
+                    estará extinto no prazo de 10 (dez) dias, contados de notificação prévia, emitida pela VIVO, sem que tal
+                    fato possa implicar pleito indenizatório de nenhuma espécie.
+                    6.9 Responsabilizar-se: (i) pela reparação de qualquer dano ocorrido em seus equipamentos e/ou da
+                    VIVO que estejam instalados nas dependências do CONTRATANTE, em razão da incorreta utilização dos
+                    serviços, incorreta instalação de algum software e/ou a utilização de modem incompatível com as
+                    especificações técnicas definidas pela VIVO; (ii) pelos danos de qualquer natureza que vier a sofrer em
+                    razão e durante a conexão de seu computador à Internet.
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 7 de 14
+                    6.10 Responsabilizar-se integralmente pela segurança de seus dados e sistemas, utilizando-se, caso
+                    entenda necessário, de softwares de proteção, os quais não fazem parte do objeto deste contrato e cuja
+                    contratação deverá ser realizada diretamente pelo CONTRATANTE, preservando-se contra a perda de
+                    dados, perdas financeiras, invasão de rede e outros eventuais danos causados aos equipamentos de sua
+                    propriedade, não cabendo qualquer tipo de ressarcimento ou indenização, por parte da VIVO, na
+                    ocorrência dessas referidas hipóteses.
+                    6.11 Contratar, para conectar-se a Internet, um provedor de serviço de conexão à Internet banda larga
+                    compatível com o VIVO INTERNET FIXA e habilitado junto à VIVO.
+                    6.12 Providenciar a instalação e manutenção da infraestrutura necessária para o funcionamento do
+                    VIVO INTERNET FIXA num segundo ponto de conexão.
+                    6.13 Somente conectar à rede da VIVO terminais que possuam certificação expedida ou aceita pela Anatel.
+                    6.14 Cumprir com as demais obrigações previstas nos artigos 59 e 60 da Resolução n.º 272, de 09 de
+                    agosto de 2001, da Anatel.
+                    CLÁUSULA SÉTIMA - DA MANUTENÇÃO DO VIVO INTERNET FIXA E DO MODEM
+                    7.1 Na hipótese de interrupções por falhas atribuíveis à VIVO, esta concederá ao CONTRATANTE um
+                    crédito em sua mensalidade de valor proporcional ao número de horas ou fração mínima de 30 (trinta)
+                    minutos consecutivos de interrupção.
+                    7.1.2 O período de 30 (trinta) minutos acima mencionado será computado a partir da sua efetiva
+                    comunicação pelo CONTRATANTE à VIVO.
+                    7.1.3 Os períodos adicionais de interrupção, ainda que em fração de 30 (trinta) minutos, serão
+                    considerados, para fins de desconto, como períodos inteiros de 30 (trinta) minutos.
+                    7.2 A VIVO poderá realizar interrupções programadas no serviço para possibilitar a manutenção na
+                    sua rede e/ou similares, hipótese em que deverá avisar o CONTRATANTE sobre a referida manutenção
+                    com antecedência mínima de 1 (uma) semana.
+                    7.2.1 Na hipótese acima mencionada, a VIVO concederá ao CONTRATANTE um desconto em sua
+                    mensalidade à razão de 1/30 (um trinta avos) por dia ou fração superior a 4 (quatro) horas de interrupção.
+                    7.3 A VIVO não será obrigada a efetuar o desconto se a interrupção ou degradação do serviço ocorrer por
+                    motivos de caso fortuito ou de força maior.
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 8 de 14
+                    7.4 A manutenção do modem se dará da seguinte forma:
+                    7.4.1 Modem locado ou em modelo de comodato: A VIVO dará manutenção ao equipamento sem
+                    qualquer ônus para o CONTRATANTE, incluindo a substituição do mesmo em caso de evoluções
+                    tecnológicas.
+                    7.4.2 Modem adquirido pelo CONTRATANTE diretamente de terceiros: Nessa hipótese o ônus da
+                    manutenção do equipamento sempre será única e exclusivamente de responsabilidade do
+                    CONTRATANTE.
+                    7.4.3 Modem adquirido pelo CONTRATANTE diretamente da VIVO: Nesse caso, após o período de
+                    garantia do modem, que é de 12 (doze) meses contados a partir da instalação do VIVO INTERNET FIXA, o
+                    ônus da sua manutenção será única e exclusivamente de responsabilidade do CONTRATANTE.
+                    CLÁUSULA OITAVA - DA VIGÊNCIA E DA DENÚNCIA
+                    8.1 Este instrumento entra em vigor na data da instalação do VIVO INTERNET FIXA e vigerá por
+                    prazo indeterminado.
+                    8.2 O contrato poderá ser denunciado pelo CONTRATANTE a qualquer tempo, sendo devido somente
+                    o valor pela utilização do serviço até a data do efetivo cancelamento.
+                    8.3 O contrato poderá ser denunciado pela VIVO a qualquer tempo, sem qualquer ônus mediante
+                    comunicação à CONTRATANTE, com antecedência de 30 (trinta) dias.
+                    8.3.1 O encerramento deste contrato na hipótese prevista em 8.3, acima, obriga as partes ao
+                    cumprimento de todas as respectivas obrigações, durante o prazo de 30 (trinta) dias estabelecido para a
+                    denúncia e, por consequência, ficam as mesmas sujeitas à aplicação de penalidades pertinentes aos
+                    inadimplementos ocorridos durante esse período.
+                    CLÁUSULA NONA - DOS PREÇOS E FORMA DE PAGAMENTO
+                    9.1 Em decorrência do ajustado neste contrato, o CONTRATANTE pagará à VIVO os seguintes
+                    valores:
+
+                    9.1.1 Habilitação do VIVO INTERNET FIXA: valor correspondente à instalação necessária para a
+                    fruição do serviço VIVO INTERNET FIXA, aí incluída a configuração do sistema do CONTRATANTE.
+                    9.1.2 Habilitação da Infraestrutura: valor correspondente à disponibilização, na Central que comporta a
+                    infraestrutura da VIVO necessária à instalação do VIVO INTERNET FIXA.
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 9 de 14
+                    9.1.3 Mensalidade: valor mensal, correspondente à prestação do serviço VIVO INTERNET FIXA pago
+                    pelo CONTRATANTE, de acordo com a velocidade nominal máxima VIVO.
+                    9.1.4 Locação de modem: valor mensal, a ser pago pelo CONTRATANTE a título de locação de
+                    modem fornecido pela VIVO.
+                    9.1.5 Apoio técnico para instalação: valor cobrado pelo suporte dado ao CONTRATANTE, pela VIVO,
+                    nas seguintes hipóteses:
+                    9.1.5.1 Caso o CONTRATANTE venha a necessitar de auxílio, por parte da VIVO, para efetuar a
+                    instalação do modem e acessórios para o funcionamento do VIVO INTERNET FIXA.
+                    9.1.5.2 O CONTRATANTE solicite auxílio, por parte da VIVO, para alterar a instalação do modem e
+                    acessórios para o funcionamento do VIVO INTERNET FIXA de um computador para outro, no mesmo
+                    endereço da instalação do serviço.
+                    9.1.5.3 Caso o CONTRATANTE adquira o modem diretamente de terceiros, pois nessa hipótese a
+                    instalação somente poderá ser feita por meio de um técnico da VIVO.
+                    9.1.6 Inspeção Técnica: valor cobrado caso seja efetuada solicitação de reparo pelo CONTRATANTE
+                    e, após o deslocamento de um técnico ao local de instalação do VIVO INTERNET FIXA, seja constatado
+                    que o defeito reclamado não é atribuível à VIVO e/ou seus equipamentos.
+                    9.2 Os valores correspondentes aos itens acima estão na tabela de preços constante do site
+                    www.vivo.com.br ou são obtidos por meio da Central de Relacionamento, cujos acessos encontram-se
+                    descritos na cláusula 14.14 do presente contrato.
+                    9.3 O CONTRATANTE autoriza, neste ato, que os valores contratados sejam debitados em NOTA
+                    FISCAL-FATURA DE SERVIÇOS DE TELECOMUNICAÇÕES (Conta Telefônica), cuja cobrança ocorrerá
+                    na próxima conta emitida após a ativação do VIVO INTERNET FIXA.
+                    CLÁUSULA DÉCIMA - DOS REAJUSTES
+                    10.1 Os preços estipulados neste instrumento serão reajustados a cada período de 12 (doze) meses ou
+                    na menor periodicidade permitida pela legislação em vigor, com data base em 01 de setembro, contados
+                    de 01 de setembro de um ano até o dia 31 de agosto do ano subsequente.
+                    10.2 O reajuste a que se refere o item 10.1 supra dar-se-á pela variação positiva do Índice Geral de
+                    Preços – Disponibilidade Interna – IGP-DI. Caso seja vedada legalmente a utilização desse índice, será
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 10 de 14
+                    utilizado o índice legalmente indicado para substituí-lo, sem necessidade de prévia notificação por parte da
+                    VIVO.
+                    CLÁUSULA DÉCIMA PRIMEIRA – DAS PENALIDADES POR FALTA DE PAGAMENTO
+                    11.1 O não pagamento dos valores contratados, lançados em Nota Fiscal Fatura de Telecomunicações
+                    (Conta Telefônica) correspondentes ao VIVO INTERNET FIXA, na data do seu vencimento, sujeita o
+                    CONTRATANTE, independente de qualquer aviso ou notificação judicial ou extrajudicial, às seguintes
+                    penalidades:
+                    11.1.1 Multa de 2% (dois por cento) aplicada sobre o valor do débito, acrescida de juros de 1% (um por
+                    cento) ao mês calculado de forma “pro rata die”, a partir do dia seguinte ao do vencimento, até a data da
+                    efetiva liquidação. Os valores correspondentes a esta penalidade serão incluídos na Conta Telefônica do
+                    período subsequente ao do não pagamento.
+                    11.1.2 Além dos encargos previstos em 11.1.1, será acrescida aos valores devidos atualização monetária,
+                    com base na variação do Índice Geral de Preços Disponibilidade Interna - IGP-DI "pro rata die", a partir do
+                    dia seguinte ao do vencimento até a data da efetiva liquidação do débito.
+                    11.2 O serviço será suspenso após 30 (trinta) dias contados do respectivo vencimento, ficando o seu
+                    restabelecimento condicionado ao pagamento do(s) valor(es) em atraso, acrescido(s) da multa e juros.
+                    11.3 A rescisão do VIVO INTERNET FIXA ocorrerá independente de qualquer aviso ou notificação
+                    judicial ou extrajudicial, após 90 (noventa) dias, contados da data do vencimento dos valores contratados e
+                    não pagos, sem prejuízo da exigibilidade dos débitos pendentes, bem como da aplicação das demais
+                    penalidades cabíveis.
+
+                    CLÁUSULA DÉCIMA SEGUNDA - DO REGIME TRIBUTÁRIO
+                    12.1 Nos preços contratados estão inclusos todos os tributos incidentes e demais encargos específicos
+                    do Setor de Telecomunicações, vigentes na data base mencionada na cláusula décima.
+                    12.2 Todos os tributos incidentes sobre qualquer valor devido em relação à prestação do VIVO
+                    INTERNET FIXA já estão inclusos nos valores mencionados na cláusula nona acima. Serão
+                    automaticamente acrescidos aos valores cobrados pela prestação do VIVO INTERNET FIXA valores
+                    relativos à criação de qualquer tributo que venha a incidir sobre o objeto deste contrato, ou alteração das
+                    alíquotas dos tributos atualmente incidentes.
+                    CLÁUSULA DÉCIMA TERCEIRA - DA EXTINÇÃO DO CONTRATO E PENALIDADES
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 11 de 14
+                    13.1 O presente contrato poderá ser rescindido, de pleno direito, mediante notificação prévia, nas
+                    seguintes hipóteses:
+                    13.1.1 Se qualquer das partes deixar de cumprir as obrigações aqui pactuadas.
+                    13.1.2 Se qualquer das partes, por ação ou omissão, que não se caracterize expressamente como
+                    obrigação decorrente deste contrato, mas que afete o mesmo, ou seja, de qualquer modo a ele vinculada,
+                    prejudique ou impeça a continuidade da sua execução.
+                    13.1.3 Se não houver disponibilidade e/ou viabilidade técnica para a instalação do VIVO INTERNET FIXA
+                    no caso de solicitação de mudança de endereço feita pelo CONTRATANTE, conforme itens 4.1.1 e 4.1.2
+                    deste contrato.
+                    13.1.4 Por determinação legal, ou por ordem emanada da autoridade competente, que determine a
+                    suspensão ou supressão da prestação dos serviços objeto deste contrato.
+                    13.1.5 Por pedido de falência, de recuperação judicial ou extrajudicial ou insolvência civil de qualquer das
+                    partes.
+                    13.1.6 Se o CONTRATANTE não realizar a instalação e subsequente utilização do serviço em até 40
+                    (quarenta) dias corridos contados da entrega do Kit de Auto-instalação.
+                    13.1.7 Se o CONTRATANTE utilizar práticas que desrespeitem a lei, a moral, os bons costumes,
+                    comprometam a imagem pública da VIVO ou, ainda, contrárias aos usos e costumes considerados
+                    razoáveis e normalmente aceitos no ambiente da Internet, tais como, mas não se restringindo a:
+                    a) invadir a privacidade ou prejudicar outros membros da comunidade Internet;
+                    b) simples tentativa, acesso ou qualquer forma de controle não autorizado de banco de dados ou
+                    sistema informatizado da VIVO e/ou de terceiros;
+                    c) acessar, alterar e/ou copiar arquivos ou, ainda, simples tentativa de obtenção de senhas e dados
+                    de terceiros sem prévia autorização;
+                    d) enviar mensagens coletivas de e-mail (spam mails) a grupos de usuários, ofertando produtos ou
+                    serviços de qualquer natureza, que não sejam de interesse dos destinatários ou que não tenham
+                    consentimento expresso deste;
+                    e) disseminar vírus de quaisquer espécies.
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 12 de 14
+                    13.2 As hipóteses de rescisão contratual previstas no item 13.1.7, acima, implicam em multa de 10%
+                    (dez por cento) sobre o valor equivalente à soma de 12 (doze) vezes o valor da mensalidade do VIVO
+                    INTERNET FIXA, a ser paga pelo CONTRATANTE à VIVO, sem prejuízo da apuração de eventuais
+                    perdas e danos decorrentes da infração.
+                    13.3 O descumprimento do item 6.4 deste contrato implica, além da rescisão do contrato, em multa no
+                    valor de R$ 10.000,00 (dez mil reais), a ser paga pela parte infratora à VIVO, sem prejuízo da apuração de
+                    eventuais perdas e danos decorrentes do referido descumprimento.
+                    13.4 Nas demais hipóteses em que a extinção deste contrato ocorrer por culpa do CONTRATANTE
+                    antes de se completarem 30 (trinta) dias consecutivos da prestação do serviço, serão cobrados os valores
+                    referentes a 1 (um) mês de prestação do VIVO INTERNET FIXA.
+                    13.5 A VIVO, a seu exclusivo critério, nos casos do CONTRATANTE utilizar-se de qualquer das práticas
+                    previstas no item 13.1.7, acima, poderá bloquear temporariamente o serviço VIVO INTERNET FIXA por 3
+                    (três) dias, sendo que tal fato não poderá ensejar a aplicação dos descontos concernentes à interrupção do
+                    serviço de que trata a cláusula sétima, deste instrumento, e a rescisão poderá ocorrer em caso de
+                    reincidência da prática supra.
+                    CLÁUSULA DÉCIMA QUARTA – DAS DISPOSIÇÕES GERAIS
+                    14.1 O presente contrato será firmado através da aceitação expressa do CONTRATANTE, via telefone,
+                    quando a venda for realizada por call center ou através do site www.vivo.com.br. O aceite eletrônico dado
+                    pelo CONTRATANTE neste contrato ou o pagamento da primeira conta telefônica relativa ao VIVO
+                    INTERNET FIXA implica na aceitação, pelo CONTRATANTE, de todas as cláusulas aqui dispostas.
+                    14.2 É facultado à VIVO proceder a adequações no VIVO INTERNET FIXA, visando o
+                    acompanhamento das evoluções tecnológicas relacionadas ao serviço prestado e a garantia da sua
+                    qualidade, sendo que nessa hipótese o CONTRATANTE será comunicado das referidas evoluções com
+                    antecedência prévia de 15 (quinze) dias.
+                    14.3 É permitido ao CONTRATANTE, mediante solicitação à VIVO com antecedência mínima de 48
+                    (quarenta e oito) horas e desde que haja viabilidade técnica, a migração da velocidade pela qual optou no
+                    ato de adesão ao serviço para qualquer outra constante da cláusula terceira deste instrumento.
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 13 de 14
+                    14.3.1 Na hipótese de migração, a cobrança dos valores relativos à nova velocidade será feita “pro-ratadie”,
+                    a contar da data da migração.
+                    14.4 O CONTRATANTE reconhece que a VIVO é responsável única e exclusivamente pela prestação
+                    do VIVO INTERNET FIXA, não tendo nenhuma responsabilidade por danos, lucros cessantes ou
+                    insucessos comerciais eventualmente sofridos pelo CONTRATANTE associados à utilização do serviço.
+                    14.5 São parâmetros de qualidade para a prestação dos serviços de banda larga, conforme dispõe o
+                    artigo 47 da Resolução n.º 272 de 9 de agosto de 2001, da Anatel: o fornecimento de sinais respeitando as
+                    características estabelecidas, o adequado atendimento às eventuais solicitações e reclamações realizadas,
+                    a disponibilidade do serviço, a emissão de sinais eletromagnéticos nos níveis estabelecidos em
+                    regulamentação e a divulgação de informações essenciais à contratação e fruição dos serviços.
+                    14.6 Qualquer tolerância das partes em relação ao estrito cumprimento das cláusulas e condições e
+                    exercício dos direitos estabelecidos neste contrato será apenas interpretada como tal, não se constituindo
+                    em hipótese alguma em novação, sendo que essas cláusulas, condições e direitos poderão ser exercidos,
+                    a qualquer tempo e a exclusivo critério de qualquer das partes.
+                    14.7 Todos os prazos e condições deste contrato vencem-se independentemente de aviso ou
+                    interpelação judicial ou extrajudicial.
+                    14.8 Caso qualquer das cláusulas ou condições previstas neste contrato venha a se tornar ineficaz ou
+                    inexequível, tal fato não afetará a eficácia ou exequibilidade das demais, que deverão ser cumpridas com
+                    fidelidade ao disposto neste contrato.
+                    14.9 Fica certo e ajustado que nenhuma das Partes tem poderes para representar ou obrigar a outra, a
+                    qualquer título ou sob qualquer pretexto.
+                    14.10 O presente contrato não poderá ser cedido por qualquer Parte sem o prévio consentimento por
+                    escrito da outra Parte. Qualquer tentativa de cessão do presente contrato com violação desta cláusula será
+                    nula e conferirá à Parte não cedente o direito de rescindir imediatamente o presente contrato.
+                    14.10.1 A restrição prevista na cláusula 14.10 acima não se aplica a cessões decorrentes de
+                    reorganizações societárias das partes ou a empresas afiliadas, coligadas, controladas ou controladoras e
+                    outras formas de fusão, cisão ou incorporação.
+
+                    Minuta Aprovada pela J*O em 01/07/2013 Página 14 de 14
+                    14.11 Este contrato obriga as partes e seus sucessores.
+                    14.12 O presente contrato substitui e anula todos e quaisquer acordos firmados anteriormente entre as
+                    Partes com relação ao objeto do mesmo, sejam eles escritos ou verbais.
+                    14.13 O CONTRATANTE, neste ato, autoriza expressamente a VIVO a enviar ao CONTRATANTE emails,
+                    malas diretas, encartes ou qualquer outro instrumento de comunicação ofertando serviços
+                    e/ou produtos da VIVO, empresas a esta relacionadas ou parceiras, bem como fornecer a estas os
+                    dados cadastrais/pessoais fornecidos para a presente contratação, para a oferta de seus produtos
+                    e/ou serviços. Tais permissões podem ser revogadas pelo CONTRATANTE a qualquer momento
+                    através de solicitação feita por meio da Central de Relacionamento ou no site www.vivo.com.br.
+                    14.14 O site da VIVO é www.vivo.com.br e o número da Central de Relacionamento é 10315. Pessoas com
+                    necessidades especiais de fala / audição acesso pelo número 142.
+                    14.15 Os números telefônicos da Anatel, endereço e site são:
+                    End.: SAUS Quadra 06 Blocos C, E, F e H
+                    CEP 70.070-940 Brasília – DF
+                    Pabx: (0XX61) 2312-2000
+                    Atendimento ao Usuário:
+                    Assessoria de Relações com o Usuário – ARU
+                    SAUS Quadra 06, Bloco F, 2º andar, Brasília – DF, CEP 70.070-940
+                    Central de Atendimento: 1331 e 1332 para portadores de necessidades especiais de fala e audição.
+                    Site: www.anatel.gov.br
+                    CLÁUSULA DÉCIMA QUINTA - DO FORO
+                    15.1 Fica eleito o foro do domicílio do CONTRATANTE para dirimir quaisquer questões relativas ao
+                    presente Contrato, com renúncia expressa de qualquer outro, por mais privilegiado que seja.
+                    Este documento encontra-se registrado no ___º Ofício de Registro de Títulos e Documentos de São
+                    Paulo/SP, sob o no. _____________, em 01/07/2013.
+                  </p>
+           
+                </div>
+
+            </div>
+            
+            <div class="col-xs-5">
+
+              <ul class="timeline scroll" >
+                
+
+                <!--   TOPICO 001 -->
+                <li id="minhaDiv" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o box-default"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">TÍTULO</h3>
+
+                      <div class="timeline-body">Conjunto de informações localizadas na parte superior do Contrato. Geralmente composto por um título que resume o objeto principal do Contrato.
+                       </div>
+
+                      <div class="box box-default">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#"   data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>
+
+                <!--   FIM TOPICO 001 -->
+
+                
+                <!--   TOPICO 002 -->
+                <li id="minhaDiv2" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DO OBJETO E CÓDIGO DE ACESSO</h3>
+
+                      <div class="timeline-body">
+                        Trata-se da indicação das partes contratantes, as quais são pormenorizadamente discriminadas no intuito de atestar sua legitimidade para contratar.
+Importante notar a necessidade da devida qualificação dos representantes (quando aplicável) para que não exista qualquer vício de formação no Contrato.
+
+Questões importantes:
+Capacidade: Verificar se ambas as partes são capazes de contratar, ou seja, verificar se estas não são absolutamente incapazes: menor de 16 anos; ou parcialmente incapazes: (i) maior de 16 anos e menor de 18 anos, (ii) ébrios naturais, (iii) viciados em tóxicos, (iv) indivíduos que não conseguem exprimir sua vontade por causa transitória ou permanente; e (v) pródigos.
+Destacamos, ainda, que o contrato celebrado por incapaz é nulo (não produz efeitos) enquanto aquele celebrado por indivíduo relativamente incapaz é anulável (pode ser tornado sem efeito pelo Poder Judiciário).
+Legitimidade: Verificar se o representante/procurador possui poderes suficientes para representar o contratante mediante a apresentação de (i) nomeação como administrador da sociedade empresária no Contrato Social ou Ata de Assembleia; (ii) procuração assinada pelo administrador da sociedade no caso de pessoa jurídica; (iii) procuração assinada pelo contratante, no caso de pessoa física; ou outros documentos que outorguem poderes de representação.
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>
+                <!--   FIM TOPICO 002 -->
+
+
+                <!--   TOPICO 003 -->
+                           
+                <!--   FIM TOPICO 003 -->
+
+
+                <!--   TOPICO 004 -->
+                 <li id="minhaDiv3" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DO PLANO DE SERVIÇO</h3>
+
+                      <div class="timeline-body">
+                        Cláusula desconhecida.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>                  
+                <!--   FIM TOPICO 004 -->
+
+                
+                <!--   TOPICO 005 -->
+                 <li id="minhaDiv4" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DAS CONDIÇÕES PARA O INÍCIO DA PRESTAÇÃO DO SERVIÇO</h3>
+
+                      <div class="timeline-body">
+                       Condição consiste em um acontecimento futuro e incerto ao qual a eficácia do contrato está vinculada, ou seja, o contrato passa a ser eficaz ou deixa de ser eficaz após a ocorrência de determinado situação.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>                  
+                <!--   FIM TOPICO 005 -->
+
+
+                <!--   TOPICO 006 -->
+                 <li id="minhaDiv5" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DO INÍCIO DA PRESTAÇÃO DO SERVIÇO</h3>
+
+                      <div class="timeline-body">
+                       Cláusula desconhecida
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>                    
+                <!--   FIM TOPICO 006 -->
+
+
+                <!--   TOPICO 007 -->
+                 <li id="minhaDiv6" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DAS TARIFAS E PREÇOS</h3>
+
+                      <div class="timeline-body">
+                       Prevê o preço, os valores, a forma de faturamento e de cobrança da contraprestação pelos serviços previstos no objeto do contrato.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>                    
+                <!--   FIM TOPICO 007 -->
+
+
+                <!--   TOPICO 008 -->
+                 <li id="minhaDiv7" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DA FORMA DE COBRANÇA</h3>
+
+                      <div class="timeline-body">
+                       Prevê o preço, os valores, a forma de faturamento e de cobrança da contraprestação pelos serviços previstos no objeto do contrato.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>                    
+                <!--   FIM TOPICO 008 -->
+
+
+                <!--   TOPICO 009 -->
+                 <li id="minhaDiv8" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DOS DIREITOS E OBRIGAÇÕES DOS ASSINANTES</h3>
+
+                      <div class="timeline-body">
+                       Direitos são as proteções garantidas ao Contratante (quem adquire o produto ou serviço), enquanto as obrigações são as disposições que a Contratante se compromete a cumprir.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>                    
+                <!--   FIM TOPICO 009 -->
+
+
+                <!--   TOPICO 010 -->
+                 <li id="minhaDiv9" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DOS DIREITOS E OBRIGAÇÕES DA VIVO</h3>
+
+                      <div class="timeline-body">
+                       Direitos são as proteções garantidas ao Contratado (quem adquire o produto ou serviço), enquanto as obrigações são as disposições que a Contratada se compromete a cumprir.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>                    
+                <!--   FIM TOPICO 010 -->
+
+
+                <!--   TOPICO 011 -->
+                 <li id="minhaDiv10" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DA MUDANÇA DE ENDEREÇO DE INSTALAÇÃO</h3>
+
+                      <div class="timeline-body">
+                       Cláusula desconhecida.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>                    
+                <!--   FIM TOPICO 011 -->
+
+
+                <!--   TOPICO 012 -->
+                 <li id="minhaDiv12" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DA CONTESTAÇÃO DE VALORES</h3>
+
+                      <div class="timeline-body">
+                       Cláusula desconhecida.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>   
+
+                <!--   FIM TOPICO 012 -->
+
+                <!--   TOPICO 013 -->
+                  <li id="minhaDiv13" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DA SUSPENSÃO DOS SERVIÇOS A PEDIDO DO ASSINANTE</h3>
+
+                      <div class="timeline-body">
+                       Cláusula desconhecida.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>                  
+                <!--   FIM TOPICO 013 -->
+
+
+                <!--   TOPICO 008 -->
+
+                  <li id="minhaDiv14" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DAS SANÇÕES POR FALTA DE PAGAMENTO</h3>
+
+                      <div class="timeline-body">
+                       Prevê as ações ou omissões que acarretarão na aplicação de multas e/ou outras penalidades destinadas a evitar que as partes descumpram, total ou parcialmente, as obrigações previstas em contrato ou mesmo retardem seu cumprimento.
+A cláusula penal também tem a função de pré-fixar as perdas e danos eventualmente sofridos em decorrência do descumprimento contratual, situação que facilita a resolução da questão diante de cogitável discussão judicial.
+Por fim é importante notar que a cláusula penal possui natureza acessória, ou seja, está estritamente vinculada às obrigações principais do contrato. Dessa forma, se as obrigações principais forem consideradas nulas, as obrigações acessórias também serão nulas.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>                  
+                <!--   FIM TOPICO 008 -->
+
+
+                <!--   TOPICO 014 -->
+                                  <li id="minhaDiv15" style="display:none">
+       
+                  <i class="fa fa-fw fa-check-square-o bg-green"></i>
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header">DA EXTINÇÃO</h3>
+
+                      <div class="timeline-body">
+                       Cláusula que prevê os motivos, ações ou omissões que resultarão no encerramento do contrato.
+As formas de extinção do contrato são: (i) o distrato, onde as partes resolvem de comum acordo encerrar o contrato, procedimento que deve seguir a mesma forma utilizada para a celebração do contrato; (ii) a resilição, onde uma das partes resolve encerrar o contrato e informa a outra parte acerca de sua intenção; (iii) inadimplemento, quando uma das partes deixa de cumprir com uma ou mais das disposições contratuais; e (iv) resolução por onerosidade excessiva, quando alguma mudança superveniente gera um custo excessivo para uma das partes.
+
+
+
+                       </div>
+
+                      <div class="box box-success">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                          <i class="fa fa-comments-o"></i>
+                           <h3 class="box-title">Comentario de Parceiros</h3>
+                        </div>
+                        
+                        <div class="slimScrollDiv" >
+                          <div class="box-body chat" id="chat-box" >
+              
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small> Adv. Jorge Luiz
+                                 </a> teste
+                             </p>
+                            </div>
+                            <hr>
+                            <div class="item">
+                              <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                              <p class="message">
+                                <a href="#" data-toggle="modal" data-target="#modal-default" class="name">
+                                  <small class="text-muted pull-right"><i class="fa fa-envelope"></i> Entre em  Contato</small>Adv. Jorge Luiz
+                                </a>teste
+                              </p>
+                            </div>
+                        
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Escreve um Comentario" class="form-control">
+                                   <span class="input-group-btn">
+                                     <button type="button" class="btn btn-warning btn-flat">Enviar</button>
+                                  </span>
+                                </div>
+                            </form>
+             
+                          </div>
+                        </div>
+            
+          
+                       </div>
+
+                </li>    
+                <!--   FIM TOPICO 014 -->
+
+
+                <!--   TOPICO 015 -->
+                <!--   FIM TOPICO 015 -->
+
+
+                <!--   TOPICO 016 -->
+                <!--   FIM TOPICO 016 -->
+
+
+                <!--   TOPICO 017 -->
+                <!--   FIM TOPICO 017 -->
+
+
+                <!--   TOPICO 018 -->
+                <!--   FIM TOPICO 018 -->
+
+
+                <!--   TOPICO 019 -->
+                <!--   FIM TOPICO 019 -->
+
+
+                <!--   TOPICO 020 -->
+                <!--   FIM TOPICO 020 -->
+
+
+                <!--   TOPICO 021 -->
+                <!--   FIM TOPICO 021 -->
+
+
+                <li>
+                  <i class="fa fa-fw fa-flag-checkered bg-gray"></i>
+                </li>
+
+
+
+
+
+
+
+
+
+
+              </ul>
+            </div>
+    
+
+
+
+       
+              <div class="modal fade" id="modal-default">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                              <h4 class="modal-title">Entre em contato</h4>
+                          </div>
+                          <div class="modal-body">
+                              <p>
+                                  Nome: Jorge Luiz
+                                  <br> E-mail: Jorge.Luiz@teste.com.br
+                                  <br>Tel: 11 4100 0000
+
+                              </p>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                          </div>
+                      </div>
+                      <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+              </div>
+
+
+
+
+
+
+          <!-- /.12 -->
+          </div>
+      
+        <!-- /.row -->
+        </div> 
+
+
+        
+
+
+      </div>
+    </div>
+  </div>
+    <footer class="col-md-12" style="margin-top:50px;">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8">
+                    <div class="footer-logo footer-logo--purple"></div>
+
+
+                    <div class="footer__blog-subscribe">
+                        <p class="col-md-6">Somente profissionais registrados podem fazer comentários e sugestões nos contratos.</p>
+                        <button class="footer__subscribe-btn btn btn--purple btn--bordered" role="button" data-toggle="modal" data-target="#login-modal">
+                            Faça login para comentar
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer__menu-container">
+                        <ul class="footer__menu">
+                           
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <p class="footer__copyright"> ©2017 Mitra - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../Scripts/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+    <script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+    <script src="../dist/js/demo.js"></script>
+
+<script>
+$(function(){
+        $(".btn-toggle").click(function(e){
+            e.preventDefault();
+            el = $(this).data('element');
+            $(el).toggle();
+        });
+    });
+
+</script>
+</body>
+</html>

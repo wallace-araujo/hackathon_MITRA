@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Analise de Contrato - ASSP</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Style/estilo.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    
+   
+    <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-color col-md-12">
+        <a class="navbar-brand" href="#"><img class="img-circle" id="img_logo" src="../img/logo_menu.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="principal.html">Avalie seu Contrato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" role="button" data-toggle="modal" data-target="#modal-contato">Entre em contato</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#" class="nav-link" role="button" data-toggle="modal" data-target="#login-modal">Acesso Restrito</a>
+                </li>
+            </ul>
+            <div class="text-right">
+               
+                <img src="/AASP/img/mitra.jpeg" style="height:50px" class="text-right" />
+            </div>
+        </div>
+    </nav>
+    <!--<nav class="navbar navbar-expand-lg navbar-dark bg-primary text-right">
+        <a class="navbar-brand">Navbar</a>
+        <a href="#" class="navbar-brand" role="button" data-toggle="modal" data-target="#login-modal">Acesso Restrito</a>
+    </nav>-->
+
+    <!--<div class="row col-md-12 jumbotron">
+        <h3 class="col-md-9 text-center titulo">Analise de Contrato - ASSP </h3>
+        
+    </div>-->
+    <br />
+    <div id="myCarousel" class="carousel slide col-md-12" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="../img/img1.jpeg" alt="" class="carousel-height">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="h1">Análise de Contrato</h3>
+                    <p>Verifique os riscos antes de assinar seu contrato</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../img/img2.jpeg" alt="" class="carousel-height">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="h1">Receba ajuda de advogados</h3>
+                    <p>Analise seus contratos de forma fácil e rápida acessando milhares de comentários de profissionais da área.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../img/img3.jpeg" alt="" class="carousel-height">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="h1">Economia</h3>
+                    <p>Econimize tempo e dinheiro realizando analises contratuais eficientes e impactantes.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+        <!-- END # BOOTSNIP INFO -->
+    <!-- BEGIN # MODAL LOGIN -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="panel-body" align="center">
+                    <img class="img-circle" id="img_logo" src="/AASP/img/logo_login.png">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Entre com seu usuário e senha.</span>
+                            </div>
+                            <input id="login_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Lembre-me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Logar</button>
+                            </div>
+                            <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Não lembra sua senha?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Registrar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Entre com seu email.</span>
+                            </div>
+                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Entrar</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Registrar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Registrar uma nova conta.</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Registrar</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Logar</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Esqueceu sua senha?</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Register Form -->
+
+                </div>
+                <!-- End # DIV Form -->
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="text-center jumbotron">
+                    <h2 class="col-md-10">Como podemos ajudar ?</h2>
+                    <a href="principal.html" class="glyphicon glyphicon-remove-sign col-md-2 top-right nounderline"></a>
+                </div>
+                <div class="panel-body" align="center">
+                    <div class="container">
+                        <div class="col-md-5">
+                            <div class="form-area">
+                                <form role="form">
+                                    <br style="clear:both">
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Telefone" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <textarea class="form-control" type="textarea" id="message" placeholder="Mensagem" maxlength="640" rows="7"></textarea>
+                                        <span class="help-block"><p id="characterLeft" class="help-block ">Após preencher clique em enviar</p></span>
+                                    </div>
+
+                                    <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Enviar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <footer class="col-md-12">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-8">
+                    <div class="footer-logo footer-logo--purple"></div>
+                    
+                   
+                    <div class="footer__blog-subscribe">
+                        <p class="col-md-6">Somente profissionais registrados podem fazer comentários e sugestões nos contratos.</p>
+                        <button class="footer__subscribe-btn btn btn--purple btn--bordered" role="button" data-toggle="modal" data-target="#login-modal">
+                            Faça login para comentar
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer__menu-container">
+                        <ul class="footer__menu">
+                            <li>
+
+                                <a href="principal.html" class="nounderline">Faça a revisão do seu contrato</a>
+
+
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <p class="footer__copyright"> ©2017 Mitra - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- END # MODAL LOGIN -->
+    <script src="../Scripts/jquery-3.2.1.js"></script>
+    
+    <script src="../Scripts/bootstrap.min.js"></script>
+    
+   
+</body>
+</html>
